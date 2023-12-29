@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<script>
+const today = new Date()
+const tomorrow = new Date(today+86400000)
+var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+tomorrow.setDate(tomorrow.getDate() + 1)
+let vacation = "Sorry, I'm on vacation until "
+let vacayResult = vacation.concat(tomorrow.toLocaleDateString("en-US", dateOptions))
+function chrisStatus(){
+	var isChrisAvailable = Array(vacayResult);
+	var rand = Math.floor(Math.random()*isChrisAvailable.length);
+    return isChrisAvailable[rand];
+}
+</script>
+</head>
+<h1 id="demo">The script element</h1>
+
+<script>
+document.getElementById("demo").innerText = chrisStatus();
+
+</script> 
+
+</body>
+</html>
