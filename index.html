@@ -3,12 +3,15 @@
 <body>
 <head>
 <script>
+<!-- stuff that makes chrisvacay work	-->
 const today = new Date()
 const tomorrow = new Date(today)
 	tomorrow.setDate(today.getDate()+1);
 var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 let vacation = "Sorry, I'm on vacation until "
 let vacayResult = vacation.concat(tomorrow.toLocaleDateString("en-US", dateOptions))
+
+<!-- to add more options to the array, just add a comma and use either variables or "quoted text" within Array([text]); -->
 function chrisStatus(){
 	var isChrisAvailable = Array(vacayResult);
 	var rand = Math.floor(Math.random()*isChrisAvailable.length);
