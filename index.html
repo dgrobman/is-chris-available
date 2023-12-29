@@ -4,9 +4,9 @@
 <head>
 <script>
 const today = new Date()
-const tomorrow = new Date(today+86400000)
+const tomorrow = new Date(today)
+	tomorrow.setDate(today.getDate()+1);
 var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-tomorrow.setDate(tomorrow.getDate() + 1)
 let vacation = "Sorry, I'm on vacation until "
 let vacayResult = vacation.concat(tomorrow.toLocaleDateString("en-US", dateOptions))
 function chrisStatus(){
